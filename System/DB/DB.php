@@ -2,13 +2,13 @@
 
 class Database
 {
-    private $host = "localhost";
+    private $host = HOST;
 
-    private $username = "root";
+    private $username = USERNAME;
 
     private $password = "";
 
-    private $database = "dynamic_portfolio";
+    private $database = DATABASE;
 
     public $conn ;
 
@@ -17,9 +17,13 @@ class Database
     {
 
     $this->conn = new mysqli($this->host,$this->username,$this->$password,$database);
+
     if($this->conn->connect_error){
-        die("Connected failed" . $this->conn->connect_error)
+
+        die("Connected failed" . $this->conn->connect_error);
+
     }
+    
     return $this->conn;
     }
 

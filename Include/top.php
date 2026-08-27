@@ -1,3 +1,10 @@
+<?php
+require ("Config.php");
+require ("../System/DB/DB.php");
+session_start();
+$Database = new Database;
+$conn = $Database->Database();
+?>
 <!doctype html>
 <html lang="en">
   <head>
