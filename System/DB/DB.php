@@ -16,7 +16,7 @@ class Database
     public function Database() 
     {
 
-    $this->conn = new mysqli($this->host,$this->username,$this->$password,$database);
+    $this->conn = new mysqli($this->host,$this->username,$this->password,$this->database);
 
     if($this->conn->connect_error){
 
