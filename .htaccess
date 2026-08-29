@@ -1,0 +1,16 @@
+RewriteEngine On
+
+# Project base path
+
+RewriteBase /Madadali/_Dynamic/_Portfolio/
+
+# Existing files aur folders ko direct access do
+
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Baqi tamam requests ko Public/index.php par bhejo
+
+RewriteRule ^$ Public/index.php [L]
+RewriteRule ^(.*)$ Public/index.php [L,QSA]
